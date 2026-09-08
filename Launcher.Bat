@@ -89,7 +89,7 @@ echo ==================================================
 echo Select privileges level:
 echo.
 echo [1] Run as Administrator (Standard)
-echo [2] Run as SYSTEM (Comming Soon...)
+echo [2] Run as SYSTEM (Advanced)
 echo [3] Run as TrustedInstaller (Maximum)
 echo.
 echo [E] Exit
@@ -111,7 +111,7 @@ exit /b
 :RunSystem
 cls
 echo [INFO] Escalating to SYSTEM privileges via TICore...
-"%TICorePath%" --S "%appPath%"
+"%TICorePath%" --System "%appPath%"
 exit /b
 
 :RunTrustInstaller
